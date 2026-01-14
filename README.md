@@ -4,7 +4,9 @@ A final project in the Agrotech Lab course at the Hebrew University. The goal of
 # שם הפרויקט שלכם (למשל: מערכת השקיה חכמה מבוססת לחות קרקע)
 
 ## Introduction
-הסבר כללי על הפרויקט והמטרות שלו. למה בחרתם דווקא בזה?
+In many cases, farmers are not in the field during irrigation. As a result, when a pipe becomes disconnected and the flow is too strong or when drippers are clogged they are not aware of the problem in real time. They only discover it later when they see the damage such as excessive water consumption or dry plants. To solve this we developed a system that prevents this lack of awareness by providing real time alerts as soon as a problem occurs.
+This project involves the development of a smart irrigation monitor and control system based on the ESP32 microcontroller. The system is designed to detect real-time failures in the irrigation system using a flow sensor that samples the flow at set intervals and compares it to predefined normal values. The system operates on an anomaly detection logic based on a 15% deviation from the expected flow rate: in the event of high flow, indicating a leak or a burst pipe, the system sends an MQTT command to automatically close the main valve and issues a email notification via the Blynk app. In the case of low flow, indicating a clog, a 'weak flow' notification is sent to the user. To ensure energy efficiency, the controller enters Deep Sleep mode after ten minutes of inactivity and wakes up automatically when flow is detected. To overcome the logical challenge where the valve is closed and the controller is 'asleep' without flow to trigger it, a touch sensor was integrated. This allows the user to manually wake the controller and regain remote control of the valve through the app whenever necessary.
+
 
 ## Hardware and Assembly
 פירוט של הרכיבים:
