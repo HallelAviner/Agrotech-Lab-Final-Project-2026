@@ -13,7 +13,7 @@ This project involves the development of a smart irrigation monitor and control 
 | Component | Hardware Model | Key Function | Datasheet | 
 | :--- | :--- | :--- | :--- |
 | **Microcontroller** | FireBeetle 2 ESP32-E | Acts as the central hub for data processing, WiFi communication (Blynk/MQTT), and power management. | [FireBeetle 2 ESP32-E](https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654)| 
-| **Flow Sensor** | YF-S201 (Hall Effect) | Monitors water consumption in real-time by measuring flow velocity via pulse frequency. || 
+| **Flow Sensor** | YF-S201 (Hall Effect) | Monitors water consumption in real-time by measuring flow velocity via pulse frequency. |[YF-S201 PDF](https://cdn-shop.adafruit.com/product-files/828/C898+datasheet.pdf)| 
 | **Manual Trigger** | Exposed Capacitive Touch Wire | Leverages the ESP32 internal touch peripheral (GPIO 13) to trigger wake-up interrupts from Deep Sleep. || 
 | **Power Source** | 3.7V Li-ion Battery | Provides portable power with optimized longevity using hardware-level power-saving cycles. || 
 | **Actuator** | Solenoid Valve | Electromechanical control of water flow, triggered remotely via MQTT protocols. || 
