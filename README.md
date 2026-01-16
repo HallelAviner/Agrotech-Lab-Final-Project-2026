@@ -21,6 +21,7 @@ This project involves the development of a smart irrigation monitor and control 
 
 
 ## Code
+```cpp
 /*
  * Irrigation Leakage Detection System
  * This project uses an ESP32 to monitor water flow via a pulse-based sensor.
@@ -267,6 +268,7 @@ void loop() {
     enterDeepSleep();
   }
 }
+```
 ## Instructions
 איך מרכיבים ואיך משתמשים? (צעד אחר צעד).
 
