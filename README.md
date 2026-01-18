@@ -1,7 +1,7 @@
-# Work in Progress - Agrotech-Lab-Final-Project-2026
+# Agrotech Lab Final Project 2026
 A final project in the Agrotech Lab course at the Hebrew University. The goal of the project is to build a system for detecting leaks in an irrigation system.
 
-# שם הפרויקט שלכם (למשל: מערכת השקיה חכמה מבוססת לחות קרקע)
+# Irrigation system leakage sensor
 
 ## Introduction
 In many cases, farmers are not in the field during irrigation. As a result, when a pipe becomes disconnected and the flow is too strong or when drippers are clogged they are not aware of the problem in real time. They only discover it later when they see the damage such as excessive water consumption or dry plants. To solve this we developed a system that prevents this lack of awareness by providing real time alerts as soon as a problem occurs.
