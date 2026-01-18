@@ -92,6 +92,9 @@ BLYNK_WRITE(V1) {
   Serial.print("New Regular Flow Setting: ");
   Serial.print(userExpectedFlow);
   Serial.println(" L/h");
+  leakAlertSent = false;
+  lowAlertSent = false;
+  lowFlowCounter = 0;
 }
 
 // Control the Solenoid Switch from Blynk
@@ -214,8 +217,8 @@ void loop() {
       lastActivityDetected = millis();
       zeroSent = false;
       
-      float highThreshold = userExpectedFlow * 1.15;
-      float lowThreshold = userExpectedFlow * 0.85;
+      float highThreshold = userExpectedFlow * 1.20;
+      float lowThreshold = userExpectedFlow * 0.80;
   
       // --- Alert Logic 1: High Flow (Leak) ---
       if (flowRatePerHour > highThreshold && !leakAlertSent) {
@@ -271,9 +274,7 @@ void loop() {
   }
 }
 ```
-## Instructions
-# 🛠 Installation & Operation Guide
-
+## Instructions & Operation Guide
 To get the project up and running, please follow the wiring diagram and configuration steps below:
 
 ### 1. Hardware Setup (Wiring)
@@ -283,7 +284,7 @@ Connect the components to the ESP32 board as shown in the diagram:
     * **Red Wire:** Connect to VCC (Power).
     * **Black Wire:** Connect to GND (Ground).
     * **Yellow Wire (Signal):** Connect to the designated GPIO pin on the controller.
-    * ⚠️ **Important:** Add a **4.7kΩ** resistor between the signal line (yellow) and **3V3** (Pull-up).
+    * **Important:** Add a **4.7kΩ** resistor between the signal line (yellow) and **3V3** (Pull-up).
 
 * **Touch Sensor (Exposed Wire):** * Connect the green cable shown in the diagram to create a touch sensor.
     * **Keep its end exposed** to allow for touch-based wakeup.
