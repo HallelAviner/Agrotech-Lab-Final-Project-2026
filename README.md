@@ -272,7 +272,34 @@ void loop() {
 }
 ```
 ## Instructions
+# 🛠 Installation & Operation Guide
+
+To get the project up and running, please follow the wiring diagram and configuration steps below:
+
+### 1. Hardware Setup (Wiring)
+Connect the components to the ESP32 board as shown in the diagram:
+
+* **Water Flow Sensor:**
+    * **Red Wire:** Connect to VCC (Power).
+    * **Black Wire:** Connect to GND (Ground).
+    * **Yellow Wire (Signal):** Connect to the designated GPIO pin on the controller.
+    * ⚠️ **Important:** Add a **4.7kΩ** resistor between the signal line (yellow) and **3V3** (Pull-up).
+
+* **Touch Sensor (Exposed Wire):** * Connect the green cable shown in the diagram to create a touch sensor.
+    * **Keep its end exposed** to allow for touch-based wakeup.
+
+* **Plumbing Integration:** * Connect the flow sensor to the pipe, ensuring it is in line with the pipe connected to the MQTT-controlled faucet.
 <img width="438" height="272" alt="image" src="https://github.com/user-attachments/assets/98799f8b-ed07-4e62-9e41-6d47f185d82a" />
+---
+
+### 2. Software Configuration
+Follow these steps to flash the firmware:
+
+1.  **Install Libraries:** Ensure all required libraries (e.g., `PubSubClient` for MQTT, `Blynk`, and `WiFi`) are installed in your IDE.
+2.  **Communication Details:** Open the code and fill in your WiFi credentials (`SSID`/`Password`) and MQTT Broker details in the relevant variables.
+3.  **Calibration:** If necessary, adjust the `Calibration Factor` in the code to match your specific flow sensor model.
+4.  **Upload Code:** Connect the ESP32 to your computer and upload the sketch.
+
 
 ## Experiment
 כאן המקום להראות את הפרויקט "בפעולה".
