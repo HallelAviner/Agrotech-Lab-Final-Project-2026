@@ -272,7 +272,7 @@ void loop() {
 }
 ```
 ## Instructions
-איך מרכיבים ואיך משתמשים? (צעד אחר צעד).
+<img width="438" height="272" alt="image" src="https://github.com/user-attachments/assets/98799f8b-ed07-4e62-9e41-6d47f185d82a" />
 
 ## Experiment
 כאן המקום להראות את הפרויקט "בפעולה".
