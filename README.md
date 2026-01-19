@@ -307,3 +307,8 @@ Follow these steps to flash the firmware:
 
 ## Experiment
 
+### Test Scenarios and System Validation
+
+The following table summarizes the different scenarios tested to verify the system's logic, including leak detection, clog alerts, and power-saving features.
+
+טבלה 1
