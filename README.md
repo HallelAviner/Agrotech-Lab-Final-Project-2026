@@ -13,7 +13,7 @@ This project involves the development of a smart irrigation monitor and control 
 | Component | Hardware Model | Key Function | Datasheet | image|
 | :--- | :--- | :--- | :--- |:--- |
 | **Microcontroller** | FireBeetle 2 ESP32-E | Acts as the central hub for data processing, WiFi communication (Blynk/MQTT), and power management. | [FireBeetle 2 ESP32-E](https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654)| <img width="190" height="284" alt="image" src="https://github.com/user-attachments/assets/eba672f5-6f8a-47fb-9e12-5d251723da23" />|
-| **Flow Sensor** | YF-S201 (Hall Effect) | Monitors water consumption in real-time by measuring flow velocity via pulse frequency. |[YF-S201 PDF](https://cdn-shop.adafruit.com/product-files/828/C898+datasheet.pdf)| |
+| **Flow Sensor** | YF-S201 (Hall Effect) | Monitors water consumption in real-time by measuring flow velocity via pulse frequency. |[YF-S201 PDF](https://cdn-shop.adafruit.com/product-files/828/C898+datasheet.pdf)|<img width="209" height="203" alt="image" src="https://github.com/user-attachments/assets/23612cc4-39a7-41f5-90ab-b2ad317842e6" />|
 | **Manual Trigger** | Exposed Capacitive Touch Wire | Leverages the ESP32 internal touch peripheral (GPIO 13) to trigger wake-up interrupts from Deep Sleep. |||
 | **Power Source** | 5V Li-ion Battery | Provides portable power with optimized longevity using hardware-level power-saving cycles. ||<img width="1292" height="1713" alt="image" src="https://github.com/user-attachments/assets/8aeeae2c-f436-479c-9580-311fac7df5d4" />|
 | **Actuator** | Solenoid Valve | Electromechanical control of water flow, triggered remotely via MQTT protocols. |||
