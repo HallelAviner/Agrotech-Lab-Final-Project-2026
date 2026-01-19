@@ -294,7 +294,7 @@ Connect the components to the ESP32 board as shown in the diagram:
 
 * **Plumbing Integration:** * Connect the flow sensor to the pipe, ensuring it is in line with the pipe connected to the MQTT-controlled faucet.
 <img width="433" height="297" alt="image" src="https://github.com/user-attachments/assets/c2ee828f-a9ef-4fdc-a9c3-67805bc6f0ed" />
----
+
 
 ### 2. Software Configuration
 Follow these steps to flash the firmware:
