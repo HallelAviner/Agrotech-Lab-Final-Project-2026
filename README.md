@@ -306,6 +306,4 @@ Follow these steps to flash the firmware:
 
 
 ## Experiment
-כאן המקום להראות את הפרויקט "בפעולה".
-* צילומי מסך מה-ThingSpeak שלכם.
-* גרפים של הנתונים שנאספו (טמפרטורה, לחות וכו').
+
