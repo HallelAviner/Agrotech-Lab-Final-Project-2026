@@ -311,4 +311,9 @@ Follow these steps to flash the firmware:
 
 The following table summarizes the different scenarios tested to verify the system's logic, including leak detection, clog alerts, and power-saving features.
 
+
+
+
+
+<img src="https://github.com/user-attachments/assets/30b6b3ba-168d-4247-b611-0f55d43ae084" width="250px">
 טבלה 1
