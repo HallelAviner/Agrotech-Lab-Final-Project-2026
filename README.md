@@ -310,7 +310,8 @@ Follow these steps to flash the firmware:
 ## Experiment
 
 ### Methodology
-[כאן נכניס את פסקת הפתיחה - למה בדקנו ככה]
+When testing the system, we faced several constraints that prevented us from assembling and testing it in the same way it would work in an agricultural irrigation system. First, we did not have an irrigation controller, and we had only one valve that could be controlled electronically (via MQTT). Therefore, we were forced to connect our leak detection system to this single MQTT valve and use it not only for stopping the water when a leak is detected but also for starting and stopping the irrigation according to the schedule (which is generally the role of an irrigation controller). Consequently, unlike a system installed in series with a controller, the valve in our experiment remained closed between irrigation cycles.
+Another constraint we took into account is that our sensor only measures flow accurately above 60 L/h. Since we lacked a drip system or sprinklers that meet this threshold, we used a partially open manual valve to simulate the flow demand of a full irrigation line. Additionally, we used other manual valves to simulate various operational scenarios and malfunctions to test the system's response.
 
 
 ### System Setup and Valve Configuration
@@ -356,8 +357,6 @@ The following table documents the specific actions and events recorded during th
 <img src="https://github.com/user-attachments/assets/e12d35b1-84a5-47b2-8932-a51e8a71485c" width="60%">
 
 
-**להוסיף תמונות**
-
 
 ### Day 2: System Expansion and Anomaly Detection
 
@@ -381,8 +380,6 @@ The following table documents the actions and events recorded during the second 
 #### Day 2 Visualizations:
 <img src="https://github.com/user-attachments/assets/9765d4a3-4ddd-4663-90cd-53cb8dc91fc2" width="60%">
 <img src="https://github.com/user-attachments/assets/edfdb4d3-83be-4be3-a9c3-1c1fe494560a" width="100%">
-
-
 
 
 
@@ -413,5 +410,7 @@ The following table documents the complete sequence of actions and events record
 <img src="https://github.com/user-attachments/assets/182d9909-7f90-476b-b37d-6a67a43dc6af" width="100%">
 
 
+### Overall Data Analysis
+<img src="https://github.com/user-attachments/assets/cfc97d5c-ee12-406f-b81a-744d6d6c085b" width="100%">
 
 
