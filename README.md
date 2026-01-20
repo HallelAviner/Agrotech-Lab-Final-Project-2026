@@ -361,9 +361,8 @@ The following table documents the specific actions and events recorded during th
 ### Day 2: System Expansion and Anomaly Detection
 
 #### Scenarios Tested:
-* **System Expansion (Simulated Leak)**: A scenario where the farmer adds a new irrigation line but forgets to update the configuration in the app. The system detects the increased flow as an anomaly, triggers a "High Flow" alert, and automatically closes the valve.
-* **Touch Sensor Reset**: Utilizing the touch sensor to wake the system after the automated leak-protection shutdown to allow for recalibration and manual override.
-
+* **System Expansion (Simulated Leak)**: A scenario where the farmer adds a new irrigation line but forgets to update the configuration in the app. The system detects the increased flow as an anomaly, triggers a "Leak detected" alert because of the high flow, and automatically closes the valve.
+* **Updating the expected flow:** After the system expansion, the farmer changes the expected flow to match the actual flow. The 'leak detected' alert is no longer triggered.
 #### Timeline of Events:
 The following table documents the actions and events recorded during the second day, focusing on the system's ability to identify flow deviations and the manual recovery process.
 
