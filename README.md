@@ -326,12 +326,12 @@ To simulate real-world irrigation conditions and various malfunction scenarios, 
 ### Scenarios Tested
 
 Five key scenarios tested to validate the system's logic and hardware integration:
+Baseline Operation (Day 1): Establishing a normal flow rate and verifying real-time data logging to Blynk.
+Manual Wake-up (Day 1+2): Using the ESP32 touch sensor to wake the controller from Deep Sleep to regain manual control.
+System Expansion / Leak Detection (Day 2): Simulating a scenario where the irrigation network is expanded (increasing flow), but the manager neglects to update the expected flow rate in the app. This tests the automated alert system and the valve shutdown logic, which triggers when the flow exceeds the expected rate by 20%. It also verifies the functionality of updating flow parameters via the app.
+Clog Detection (Day 3): Simulating a blockage in the drippers to verify the "Weak Flow" notification logic when flow drops significantly below expected levels.
+Automated Flow Wake-up (Day 3): Demonstrating the system's ability to "wake on flow" once irrigation is initiated by an external MQTT command.
 
-1.  **Baseline Operation (Day 1):** Establishing a normal flow rate and verifying real-time data logging to Blynk.
-2.  **Manual Wake-up (Day 1+2):** Using the ESP32 touch interface to wake the controller from Deep Sleep to regain manual control.
-3.  **System Expansion / Leak Detection (Day 2):** Simulating a leak or an unauthorized system expansion to test the automated alert and valve shutdown logic when flow exceeds 20% of the expected rate.
-4.  **Clog Detection (Day 3):** Simulating a blockage in the drippers to verify the "Weak Flow" notification logic when flow drops significantly below expected levels.
-5.  **Automated Flow Wake-up (Day 3):** Demonstrating the system's ability to "wake on flow" once irrigation is initiated by an external MQTT command.
 
 ## Detailed Experimental Logs
 
