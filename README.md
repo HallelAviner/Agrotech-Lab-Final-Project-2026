@@ -386,7 +386,7 @@ The following table documents the actions and events recorded during the second 
 ### Day 3: Malfunctions and Automated Triggers
 
 #### Scenarios Tested:
-* **Clogged Pipeline Simulation**: Partially closing a secondary valve to simulate a blockage or clogged drippers. The system identifies the drop in flow rate and issues a "Weak Flow" notification.
+* **Clogged Pipeline Simulation**: Partially closing a secondary valve to simulate a blockage or clogged drippers. The system identifies the drop in flow rate and after 5 minutes issues a "Weak Flow" notification, without closing the valve.
 * **Flow-Induced Wake-up**: Demonstrating the system's ability to wake up automatically from Deep Sleep the moment water flow is detected (e.g., when the main valve is opened via an external MQTT command).
 
 #### Timeline of Events:
