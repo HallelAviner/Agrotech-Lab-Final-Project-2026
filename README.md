@@ -305,6 +305,8 @@ Follow these steps to flash the firmware:
 4.  **Upload Code:** Connect the ESP32 to your computer and upload the sketch.
 
 
+
+
 ## Experiment
 
 ### Methodology
@@ -316,7 +318,7 @@ To simulate real-world irrigation conditions and various malfunction scenarios, 
 * **Valve 1 (Main Control):** Open when irrigation is active, Closed when the system is shut off.
 * **Valve 2 (Flow Regulator):** Set to a **Partially Open** position to establish baseline flow.
 * **Valve 3 (Clog Simulator):** Set to **Open**, used to simulate blockages.
-* **Valve 4 (Leak Simulator):** Set to **Closed**, used to simulate addition of another pipe to the irrigation system.
+* **Valve 4 (Leak Simulator):** Set to **Closed**, used to simulate pipe bursts or leaks.
 
 <img src="https://github.com/user-attachments/assets/30b6b3ba-168d-4247-b611-0f55d43ae084" width="40%">
 
@@ -351,9 +353,10 @@ The following table documents the specific actions and events recorded during th
 | 1/18/2026 | 15:55 | **ESP32** entered **Deep Sleep** mode and disconnected from **Blynk** | No water flow detected for 10 minutes |
 
 #### Day 1 Visualizations:
+<img src="https://github.com/user-attachments/assets/e12d35b1-84a5-47b2-8932-a51e8a71485c" width="60%">
+
 
 **להוסיף תמונות**
-
 
 
 ### Day 2: System Expansion and Anomaly Detection
@@ -376,9 +379,9 @@ The following table documents the actions and events recorded during the second 
 | 1/19/2026 | 15:56 | **ESP32** entered **Deep Sleep** mode and disconnected from **Blynk**. | No water flow detected for 10 minutes. |
 
 #### Day 2 Visualizations:
+<img src="https://github.com/user-attachments/assets/9765d4a3-4ddd-4663-90cd-53cb8dc91fc2" width="60%">
 <img src="https://github.com/user-attachments/assets/edfdb4d3-83be-4be3-a9c3-1c1fe494560a" width="100%">
 
-***Insert Graph showing the flow spike and subsequent shutdown here***
 
 
 
@@ -407,5 +410,8 @@ The following table documents the complete sequence of actions and events record
 > ***Note on the Unexpected Malfunction (15:27):** We hypothesize that the flow increase occurred because the positioning of Valve 2 or Valve 4 was inadvertently altered between test runs. As the system was installed in a public area, it is possible that the valves were accidentally disturbed, leading to a wider opening and higher flow rates. Additionally, fluctuations in water pressure—which were not monitored during this experiment—may have also contributed to the observed flow variations.*
 
 #### Day 3 Visualizations:
-*Insert Blynk Low-Flow Alert Screenshot Here*
-*Insert Graph showing the "Wake on Flow" event and the Clog detection here*
+<img src="https://github.com/user-attachments/assets/182d9909-7f90-476b-b37d-6a67a43dc6af" width="60%">
+
+
+
+
