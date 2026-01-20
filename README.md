@@ -293,8 +293,7 @@ Connect the components to the ESP32 board as shown in the diagram:
     * **Keep its end exposed** to allow for touch-based wakeup.
 
 * **Plumbing Integration:** * Connect the flow sensor to the pipe, ensuring it is in line with the pipe connected to the MQTT-controlled faucet.The system is designed to be installed alongside a standard irrigation controller of any type. It operates a dedicated valve, separate from the one managed by the irrigation controller. These two valves are connected in series, meaning that closing either valve will halt the water flow. While the main irrigation valve remains closed and only opens during scheduled cycles, our valve remains normally open, closing only when a leak is detected. Once the leak is repaired, our valve can be manually reopened via the Blynk app to resume the scheduled irrigation.
-<img width="433" height="297" alt="image" src="https://github.com/user-attachments/assets/c2ee828f-a9ef-4fdc-a9c3-67805bc6f0ed" />
-
+<img src="https://github.com/user-attachments/assets/078e5f23-f9db-4ea1-b5ed-ef31c5fb0efb" width="50%">
 
 ### 2. Software Configuration
 Follow these steps to flash the firmware:
@@ -358,6 +357,7 @@ The following table documents the specific actions and events recorded during th
 
 
 
+
 ### Day 2: System Expansion and Anomaly Detection
 
 #### Scenarios Tested:
@@ -380,6 +380,7 @@ The following table documents the actions and events recorded during the second 
 #### Day 2 Visualizations:
 <img src="https://github.com/user-attachments/assets/9765d4a3-4ddd-4663-90cd-53cb8dc91fc2" width="60%">
 <img src="https://github.com/user-attachments/assets/edfdb4d3-83be-4be3-a9c3-1c1fe494560a" width="100%">
+
 
 
 
@@ -408,6 +409,8 @@ The following table documents the complete sequence of actions and events record
 
 #### Day 3 Visualizations:
 <img src="https://github.com/user-attachments/assets/182d9909-7f90-476b-b37d-6a67a43dc6af" width="100%">
+
+
 
 
 ### Overall Data Analysis
