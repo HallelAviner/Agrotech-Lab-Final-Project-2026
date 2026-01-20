@@ -331,22 +331,81 @@ Five key scenarios tested to validate the system's logic and hardware integratio
 4.  **Clog Detection (Day 3):** Simulating a blockage in the drippers to verify the "Weak Flow" notification logic when flow drops significantly below expected levels.
 5.  **Automated Flow Wake-up (Day 3):** Demonstrating the system's ability to "wake on flow" once irrigation is initiated by an external MQTT command.
 
-### Day 1: Baseline and Manual Control
-**Scenarios:** Normal operation and Touch Sensor wake-up.
-[כאן נכניס את הטבלה, ההסברים והתמונות של יום 1]
+## Detailed Experimental Logs
 
-### Day 2: Leak Detection and System Expansion
-**Scenarios:** Increased flow (adding drippers) and Leak detection.
-[כאן נכניס את הטבלה, ההסברים והתמונות של יום 2]
+### Day 1: System Baseline and Manual Interaction
+#### Scenarios Tested:
+* **Normal System Operation**: A standard run to establish the "Expected Flow" baseline and verify that the ESP32 correctly logs data to Blynk.
+* **Manual Wake-up via Touch Sensor**: Testing the integrated touch sensor's ability to wake the ESP32 from Deep Sleep.
 
-### Day 3: Clogs and Automated Wake-up
-**Scenarios:** Clogged drippers and Flow-based wake-up via MQTT.
-[כאן נכניס את הטבלה, ההסברים והתמונות של יום 3]
+> **Note:** While we used this to initiate irrigation during our tests, for a farmer, this feature serves to manually wake the system and regain remote control after an automated safety shutdown caused by a leak.
+
+#### Timeline of Events:
+The following table documents the specific actions and events recorded during the first day of testing to establish the system's baseline operation and power-saving features.
+
+| Date | Time | Action / Event | Reason |
+| :--- | :--- | :--- | :--- |
+| 1/18/2026 | 13:15 | Closed **Valve 1** via the **Blynk** app switch | Initiating the initial test run |
+| 1/18/2026 | 15:15 | Woke the **ESP32** via the touch sensor and opened **Valve 1** via **Blynk** | Starting the irrigation cycle |
+| 1/18/2026 | 15:45 | Closed **Valve 1** via the **Blynk** app switch | Ending the irrigation cycle |
+| 1/18/2026 | 15:55 | **ESP32** entered **Deep Sleep** mode and disconnected from **Blynk** | No water flow detected for 10 minutes |
+
+#### Day 1 Visualizations:
+
+**להוסיף תמונות**
+
+
+
+### Day 2: System Expansion and Anomaly Detection
+
+#### Scenarios Tested:
+* **System Expansion (Simulated Leak)**: A scenario where the farmer adds a new irrigation line but forgets to update the configuration in the app. The system detects the increased flow as an anomaly, triggers a "High Flow" alert, and automatically closes the valve.
+* **Touch Sensor Reset**: Utilizing the touch sensor to wake the system after the automated leak-protection shutdown to allow for recalibration and manual override.
+
+#### Timeline of Events:
+The following table documents the actions and events recorded during the second day, focusing on the system's ability to identify flow deviations and the manual recovery process.
+
+| Date | Time | Action / Event | Reason |
+| :--- | :--- | :--- | :--- |
+| 1/19/2026 | 15:04 | Partially opened **Valve 3**. During plumbing adjustments, a 1 L/h flow was detected, waking the **ESP32**. | Simulating the addition of a new irrigation line without updating the "Expected Flow" in **Blynk**. |
+| 1/19/2026 | 15:14 | **ESP32** entered **Deep Sleep** mode and disconnected from **Blynk**. | No water flow detected for 10 minutes. |
+| 1/19/2026 | 15:15 | Woke the **ESP32** via the touch sensor and opened **Valve 1** via **Blynk**. | Starting the irrigation cycle. |
+| 1/19/2026 | 15:16 | Flow reached 218 L/h; **Valve 1** was automatically closed via **MQTT**, and an email alert was sent to the farmer. | Flow rate exceeded the 20% deviation threshold from the "Expected Flow". |
+| 1/19/2026 | 15:18 | Updated "Expected Flow" to 235 L/h and reopened **Valve 1** via the **Blynk** app. | Farmer received the alert, updated the threshold to match the new configuration, and resumed irrigation. |
+| 1/19/2026 | 15:45 | Closed **Valve 1** via the **Blynk** app switch. | Ending the irrigation cycle. |
+| 1/19/2026 | 15:56 | **ESP32** entered **Deep Sleep** mode and disconnected from **Blynk**. | No water flow detected for 10 minutes. |
+
+#### Day 2 Visualizations:
+<img src="https://github.com/user-attachments/assets/edfdb4d3-83be-4be3-a9c3-1c1fe494560a" width="100%">
+
+***Insert Graph showing the flow spike and subsequent shutdown here***
 
 
 
 
+### Day 3: Malfunctions and Automated Triggers
 
-טבלה 1
+#### Scenarios Tested:
+* **Clogged Pipeline Simulation**: Partially closing a secondary valve to simulate a blockage or clogged drippers. The system identifies the drop in flow rate and issues a "Weak Flow" notification.
+* **Flow-Induced Wake-up**: Demonstrating the system's ability to wake up automatically from Deep Sleep the moment water flow is detected (e.g., when the main valve is opened via an external MQTT command).
 
-טבלה 1
+#### Timeline of Events:
+The following table documents the complete sequence of actions and events recorded during the final day of testing.
+
+| Date | Time | Action / Event | Reason |
+| :--- | :--- | :--- | :--- |
+| 1/20/2026 | 15:10 | Closed **Valve 3** | Simulating a clog in one of the irrigation lines |
+| 1/20/2026 | 15:15 | Opened **Valve 1** via **MQTT** while the **ESP32** was in Deep Sleep. The device immediately woke up from the flow and began measurements | Testing the "Wake on Flow" feature |
+| 1/20/2026 | 15:21 | Flow rate of 129 L/h detected; a "Weak Flow" email alert was received | Low flow triggered by the simulated clog |
+| 1/20/2026 | 15:25 | Opened **Valve 3** | Farmer received the alert and cleared the blockage |
+| 1/20/2026 | 15:27 | Flow jumped to 321 L/h; a leak alert was received, and water flow was automatically stopped via **MQTT** | **Unexpected Malfunction**: Flow exceeded the expected baseline of ~218 L/h (see note below) |
+| 1/20/2026 | 15:28 | Partially closed **Valve 3** and opened the valve via the **Blynk** app switch | Adjusting the manual valve to return flow to the "Expected Flow" range |
+| 1/20/2026 | 15:29 | Flow stabilized at 214 L/h, matching the "Expected Flow" threshold | Irrigation cycle resumed normal operation |
+| 1/20/2026 | 15:45 | Closed **Valve 1** via the **Blynk** app switch | Ending the irrigation cycle |
+| 1/20/2026 | 15:56 | **ESP32** entered **Deep Sleep** mode and disconnected from **Blynk** | No water flow detected for 10 minutes |
+
+> ***Note on the Unexpected Malfunction (15:27):** We hypothesize that the flow increase occurred because the positioning of Valve 2 or Valve 4 was inadvertently altered between test runs. As the system was installed in a public area, it is possible that the valves were accidentally disturbed, leading to a wider opening and higher flow rates. Additionally, fluctuations in water pressure—which were not monitored during this experiment—may have also contributed to the observed flow variations.*
+
+#### Day 3 Visualizations:
+*Insert Blynk Low-Flow Alert Screenshot Here*
+*Insert Graph showing the "Wake on Flow" event and the Clog detection here*
