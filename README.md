@@ -310,7 +310,8 @@ Follow these steps to flash the firmware:
 ## Experiment
 
 ### Methodology
-[כאן נכניס את פסקת הפתיחה שתשלחי לי - למה בדקנו ככה]
+[כאן נכניס את פסקת הפתיחה - למה בדקנו ככה]
+
 
 ### System Setup and Valve Configuration
 To simulate real-world irrigation conditions and various malfunction scenarios, we established a baseline setup using four valves:
@@ -318,8 +319,7 @@ To simulate real-world irrigation conditions and various malfunction scenarios, 
 * **Valve 1 (Main Control):** Open when irrigation is active, Closed when the system is shut off.
 * **Valve 2 (Flow Regulator):** Set to a **Partially Open** position to establish baseline flow.
 * **Valve 3 (Clog Simulator):** Set to **Open**, used to simulate blockages.
-* **Valve 4 (Leak Simulator):** Set to **Closed**, used to simulate pipe bursts or leaks.
-
+* **Valve 4 (System Expansion Simulator):** Set to **Closed**, used to simulate the addition of an irrigation pipe.
 <img src="https://github.com/user-attachments/assets/30b6b3ba-168d-4247-b611-0f55d43ae084" width="40%">
 
 
@@ -410,7 +410,7 @@ The following table documents the complete sequence of actions and events record
 > ***Note on the Unexpected Malfunction (15:27):** We hypothesize that the flow increase occurred because the positioning of Valve 2 or Valve 4 was inadvertently altered between test runs. As the system was installed in a public area, it is possible that the valves were accidentally disturbed, leading to a wider opening and higher flow rates. Additionally, fluctuations in water pressure—which were not monitored during this experiment—may have also contributed to the observed flow variations.*
 
 #### Day 3 Visualizations:
-<img src="https://github.com/user-attachments/assets/182d9909-7f90-476b-b37d-6a67a43dc6af" width="60%">
+<img src="https://github.com/user-attachments/assets/182d9909-7f90-476b-b37d-6a67a43dc6af" width="100%">
 
 
 
