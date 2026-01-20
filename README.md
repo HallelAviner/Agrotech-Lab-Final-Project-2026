@@ -292,7 +292,7 @@ Connect the components to the ESP32 board as shown in the diagram:
 * **Touch Sensor (Exposed Wire):** * Connect the green cable shown in the diagram to create a touch sensor.
     * **Keep its end exposed** to allow for touch-based wakeup.
 
-* **Plumbing Integration:** * Connect the flow sensor to the pipe, ensuring it is in line with the pipe connected to the MQTT-controlled faucet.
+* **Plumbing Integration:** * Connect the flow sensor to the pipe, ensuring it is in line with the pipe connected to the MQTT-controlled faucet.The system is designed to be installed alongside a standard irrigation controller of any type. It operates a dedicated valve, separate from the one managed by the irrigation controller. These two valves are connected in series, meaning that closing either valve will halt the water flow. While the main irrigation valve remains closed and only opens during scheduled cycles, our valve remains normally open, closing only when a leak is detected. Once the leak is repaired, our valve can be manually reopened via the Blynk app to resume the scheduled irrigation.
 <img width="433" height="297" alt="image" src="https://github.com/user-attachments/assets/c2ee828f-a9ef-4fdc-a9c3-67805bc6f0ed" />
 
 
