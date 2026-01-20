@@ -307,13 +307,46 @@ Follow these steps to flash the firmware:
 
 ## Experiment
 
-### Test Scenarios and System Validation
+### Methodology
+[כאן נכניס את פסקת הפתיחה שתשלחי לי - למה בדקנו ככה]
 
-The following table summarizes the different scenarios tested to verify the system's logic, including leak detection, clog alerts, and power-saving features.
+### System Setup and Valve Configuration
+To simulate real-world irrigation conditions and various malfunction scenarios, we established a baseline setup using four valves:
+
+* **Valve 1 (Main Control):** Open when irrigation is active, Closed when the system is shut off.
+* **Valve 2 (Flow Regulator):** Set to a **Partially Open** position to establish baseline flow.
+* **Valve 3 (Clog Simulator):** Set to **Open**, used to simulate blockages.
+* **Valve 4 (Leak Simulator):** Set to **Closed**, used to simulate pipe bursts or leaks.
+
+<img src="https://github.com/user-attachments/assets/30b6b3ba-168d-4247-b611-0f55d43ae084" width="40%">
+
+
+### Scenarios Tested
+
+Five key scenarios tested to validate the system's logic and hardware integration:
+
+1.  **Baseline Operation (Day 1):** Establishing a normal flow rate and verifying real-time data logging to Blynk.
+2.  **Manual Wake-up (Day 1+2):** Using the ESP32 touch interface to wake the controller from Deep Sleep to regain manual control.
+3.  **System Expansion / Leak Detection (Day 2):** Simulating a leak or an unauthorized system expansion to test the automated alert and valve shutdown logic when flow exceeds 20% of the expected rate.
+4.  **Clog Detection (Day 3):** Simulating a blockage in the drippers to verify the "Weak Flow" notification logic when flow drops significantly below expected levels.
+5.  **Automated Flow Wake-up (Day 3):** Demonstrating the system's ability to "wake on flow" once irrigation is initiated by an external MQTT command.
+
+### Day 1: Baseline and Manual Control
+**Scenarios:** Normal operation and Touch Sensor wake-up.
+[כאן נכניס את הטבלה, ההסברים והתמונות של יום 1]
+
+### Day 2: Leak Detection and System Expansion
+**Scenarios:** Increased flow (adding drippers) and Leak detection.
+[כאן נכניס את הטבלה, ההסברים והתמונות של יום 2]
+
+### Day 3: Clogs and Automated Wake-up
+**Scenarios:** Clogged drippers and Flow-based wake-up via MQTT.
+[כאן נכניס את הטבלה, ההסברים והתמונות של יום 3]
 
 
 
 
 
-<img src="https://github.com/user-attachments/assets/30b6b3ba-168d-4247-b611-0f55d43ae084" width="250px">
+טבלה 1
+
 טבלה 1
