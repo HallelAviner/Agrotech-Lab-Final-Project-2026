@@ -316,7 +316,7 @@ To simulate real-world irrigation conditions and various malfunction scenarios, 
 * **Valve 1 (Main Control):** Open when irrigation is active, Closed when the system is shut off.
 * **Valve 2 (Flow Regulator):** Set to a **Partially Open** position to establish baseline flow.
 * **Valve 3 (Clog Simulator):** Set to **Open**, used to simulate blockages.
-* **Valve 4 (Leak Simulator):** Set to **Closed**, used to simulate pipe bursts or leaks.
+* **Valve 4 (Leak Simulator):** Set to **Closed**, used to simulate addition of another pipe to the irrigation system.
 
 <img src="https://github.com/user-attachments/assets/30b6b3ba-168d-4247-b611-0f55d43ae084" width="40%">
 
