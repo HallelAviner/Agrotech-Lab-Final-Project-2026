@@ -347,7 +347,7 @@ The following table documents the specific actions and events recorded during th
 
 | Date | Time | Action / Event | Reason |
 | :--- | :--- | :--- | :--- |
-| 1/18/2026 | 13:15 | Closed **Valve 1** via the **Blynk** app switch | Initiating the initial test run |
+| 1/18/2026 | 13:15 |  Closed **Valve 1** via the **Blynk** app switch and set the expectedflow to 107 L/h | Setting the initial parameters |
 | 1/18/2026 | 15:15 | Woke the **ESP32** via the touch sensor and opened **Valve 1** via **Blynk** | Starting the irrigation cycle |
 | 1/18/2026 | 15:45 | Closed **Valve 1** via the **Blynk** app switch | Ending the irrigation cycle |
 | 1/18/2026 | 15:55 | **ESP32** entered **Deep Sleep** mode and disconnected from **Blynk** | No water flow detected for 10 minutes |
