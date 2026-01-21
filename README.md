@@ -416,5 +416,10 @@ The following table documents the complete sequence of actions and events record
 
 ### Overall Data Analysis
 <img src="https://github.com/user-attachments/assets/e2828d3b-f7a8-46ad-81aa-a1ce4ec69776" width="100%">
+
+### User Interface
+The system is monitored via the **Blynk IoT Platform**. 
+* **Live Dashboard:** [Blynk.Cloud](https://blynk.cloud/) (Requires authenticated access).
+* **Alert System:** Real-time push notifications and email alerts are managed via Blynk's event engine.
 <img src="https://github.com/user-attachments/assets/0b4c914f-b78f-4324-8dec-6f5dd023e7b8" width="50%">
 
