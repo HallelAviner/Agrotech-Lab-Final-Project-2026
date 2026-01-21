@@ -305,6 +305,13 @@ Follow these steps to flash the firmware:
 
 
 
+### User Interface
+The system is monitored via the **Blynk IoT Platform**. 
+* **Live Dashboard:** [Blynk.Cloud](https://blynk.cloud/) (Requires authenticated access).
+* **Alert System:** Real-time email alerts are managed via Blynk's event engine.
+<img src="https://github.com/user-attachments/assets/0b4c914f-b78f-4324-8dec-6f5dd023e7b8" width="40%">
+
+
 
 ## Experiment
 
@@ -322,12 +329,6 @@ To simulate real-world irrigation conditions and various malfunction scenarios, 
 * **Valve 4 (System Expansion Simulator):** Set to **Closed**, used to simulate the addition of an irrigation pipe.
 <img src="https://github.com/user-attachments/assets/30b6b3ba-168d-4247-b611-0f55d43ae084" width="40%">
 
-
-### User Interface
-The system is monitored via the **Blynk IoT Platform**. 
-* **Live Dashboard:** [Blynk.Cloud](https://blynk.cloud/) (Requires authenticated access).
-* **Alert System:** Real-time push notifications and email alerts are managed via Blynk's event engine.
-<img src="https://github.com/user-attachments/assets/0b4c914f-b78f-4324-8dec-6f5dd023e7b8" width="40%">
 
 
 
