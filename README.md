@@ -354,6 +354,7 @@ The following table documents the specific actions and events recorded during th
 
 #### Day 1 Visualizations:
 <img src="https://github.com/user-attachments/assets/e12d35b1-84a5-47b2-8932-a51e8a71485c" width="50%">
+<img src="https://github.com/user-attachments/assets/29b6bf15-9483-4bb2-af68-577d9a69c939" width="50%">
 
 
 
