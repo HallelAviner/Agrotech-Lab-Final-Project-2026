@@ -407,12 +407,13 @@ The following table documents the complete sequence of actions and events record
 > ***Note on the Unexpected Malfunction (15:27):** We hypothesize that the flow increase occurred because the positioning of Valve 2 or Valve 4 was inadvertently altered between test runs. As the system was installed in a public area, it is possible that the valves were accidentally disturbed, leading to a wider opening and higher flow rates. Additionally, fluctuations in water pressure—which were not monitored during this experiment—may have also contributed to the observed flow variations.*
 
 #### Day 3 Visualizations:
-<img src="https://github.com/user-attachments/assets/0b715230-fc38-4354-afbe-8ae536b0f5ad" width="60%">
+<img src="https://github.com/user-attachments/assets/a7907692-1d6f-4e09-b5b5-44612524e6cf" width="80%">
+<img src="https://github.com/user-attachments/assets/2cac51af-81c6-42b6-9d8c-485c60099bed" width="100%">
 
 
 
 
 ### Overall Data Analysis
-<img src="https://github.com/user-attachments/assets/0a741870-82fc-4309-ac10-2e65249cbd4d" width="100%">
-
+<img src="https://github.com/user-attachments/assets/e2828d3b-f7a8-46ad-81aa-a1ce4ec69776" width="100%">
+<img src="https://github.com/user-attachments/assets/0b4c914f-b78f-4324-8dec-6f5dd023e7b8" width="50%">
 
