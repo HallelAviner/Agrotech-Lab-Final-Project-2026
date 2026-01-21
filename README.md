@@ -379,7 +379,7 @@ The following table documents the actions and events recorded during the second 
 
 #### Day 2 Visualizations:
 <img src="https://github.com/user-attachments/assets/9765d4a3-4ddd-4663-90cd-53cb8dc91fc2" width="50%">
-<img src="https://github.com/user-attachments/assets/edfdb4d3-83be-4be3-a9c3-1c1fe494560a" width="100%">
+<img src="https://github.com/user-attachments/assets/47a82b93-cf37-4347-a074-6323f8deb3b0" width="90%">
 
 
 
@@ -409,7 +409,7 @@ The following table documents the complete sequence of actions and events record
 
 #### Day 3 Visualizations:
 <img src="https://github.com/user-attachments/assets/a7907692-1d6f-4e09-b5b5-44612524e6cf" width="80%">
-<img src="https://github.com/user-attachments/assets/2cac51af-81c6-42b6-9d8c-485c60099bed" width="100%">
+<img src="https://github.com/user-attachments/assets/2cac51af-81c6-42b6-9d8c-485c60099bed" width="85%">
 
 
 
